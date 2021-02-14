@@ -23,7 +23,8 @@ class TestUtils(unittest.TestCase):
         self.assertEqual(utils.integral("2 * x**2 - 4 * x + 2", 2, -4), -84)
 
 if __name__ == '__main__':
-    with open('test-result/results.xml', 'wb') as output:
-        unittest.main(
-            testRunner=xmlrunner.XMLTestRunner(output=output),
-            failfast=False, buffer=False, catchbreak=False)
+    unittest.main(
+        testRunner=xmlrunner.XMLTestRunner(output='test-reports'),
+        # these make sure that some options that are not applicable
+        # remain hidden from the help menu.
+        failfast=False, buffer=False, catchbreak=False)
