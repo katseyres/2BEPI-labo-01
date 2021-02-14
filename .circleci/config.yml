@@ -8,7 +8,7 @@ jobs:
       - checkout
       - run: python -m pip install scipy
       - run:
-          command: py ./test_utils.py test
+          command: python ./test_utils.py test
           name: Test
 
 workflows:
