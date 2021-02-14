@@ -10,8 +10,8 @@ jobs:
           name: Install Python deps in a venv
           command: |
             ls -a
-            python -m venv venv
-            . venv/bin/activate
+            pip scipy > requirements.txt
+            ls -a
             pip install -r requirements.txt
       - run:
           command: python ./test_utils.py test
