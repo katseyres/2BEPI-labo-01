@@ -6,7 +6,7 @@
 import math
 from math import sqrt
 from scipy import integrate
-import scipy
+# import scipy
 
 def fact(n):
 	"""Computes the factorial of a natural number.
