@@ -4,6 +4,7 @@
 
 import unittest
 import utils
+import xmlrunner
 
 class TestUtils(unittest.TestCase):
     def test_fact(self):
@@ -18,10 +19,11 @@ class TestUtils(unittest.TestCase):
         
     
     def test_integrate(self):
-        self.assertEqual(utils.integral("2 * x**2 - 4 * x + 2", -2, 4), 6) # 3
+        self.assertEqual(utils.integral("2 * x**2 - 4 * x + 2", -2, 4), 36) # 3
         self.assertEqual(utils.integral("2 * x**2 - 4 * x + 2", 2, -4), -84)
 
 if __name__ == '__main__':
-    suite = unittest.TestLoader().loadTestsFromTestCase(TestUtils)
-    runner = unittest.TextTestRunner()
-    exit(not runner.run(suite).wasSuccessful())
+    with open('results.xml', 'wb') as output:
+        unittest.main(
+            testRunner=xmlrunner.XMLTestRunner(output=output),
+            failfast=False, buffer=False, catchbreak=False)
