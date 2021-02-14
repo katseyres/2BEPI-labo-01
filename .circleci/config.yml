@@ -6,7 +6,7 @@ jobs:
       - image: python:3.9.1
     steps:
       - checkout
-      - run: python -m pip install -r scipy
+      - run: python -m pip install scipy
       - save_cache:
           key: pip-packages-v1-{{ .Branch }}-{{ checksum "requirements.txt" }} 
           paths:
