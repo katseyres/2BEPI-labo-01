@@ -18,7 +18,7 @@ class TestUtils(unittest.TestCase):
         
     
     def test_integrate(self):
-        self.assertEqual(utils.integral("2 * x**2 - 4 * x + 2", -2, 4), 6) # 36
+        self.assertEqual(utils.integral("2 * x**2 - 4 * x + 2", -2, 4), 6) # 3
         self.assertEqual(utils.integral("2 * x**2 - 4 * x + 2", 2, -4), -84)
 
 if __name__ == '__main__':
