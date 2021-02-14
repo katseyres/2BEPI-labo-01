@@ -8,11 +8,12 @@ jobs:
     executor: python/default
     steps:
       - checkout
-      - python/load-cache
       - run:
-          command: pip install -r ./requirements.txt
-          name: Install Deps
-      - python/save-cache
+          command: |
+            pip install scipy
+      # - python/load-cache
+      # - python/install-deps
+      # - python/save-cache
       - run:
           command: py ./test_utils.py test
           name: Test
