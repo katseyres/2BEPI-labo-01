@@ -6,7 +6,7 @@ jobs:
       - image: python:3.9.1
     steps:
       - checkout
-      - run: python -m pip install -r ./requirements.txt
+      - run: python -m pip install -r C:\Users\Denis\OneDrive\Documents\2020-2021_ecam\Q2\2bepi-projet-informatique\Laboratoires\CircleCI_test\requirements.txt
       - save_cache:
           key: pip-packages-v1-{{ .Branch }}-{{ checksum "requirements.txt" }} 
           paths:
