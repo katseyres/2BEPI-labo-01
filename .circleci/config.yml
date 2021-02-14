@@ -17,6 +17,9 @@ jobs:
       - run:
           command: python ./test_utils.py test
           name: Test
+      - store_test_results:
+          path: test-results
+
 
 workflows:
   main:
