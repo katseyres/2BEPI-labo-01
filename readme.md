@@ -1,6 +1,6 @@
 # 2BEPI - IT Project (labs 1)
 
-![status](https://circleci.com/gh/katseyres/labo1-circleci.svg?style=svg)
+![status](https://circleci.com/gh/katseyres/2BEPI-labo-01.svg?style=svg)
 
 ## Goals
 
