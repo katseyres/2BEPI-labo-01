@@ -10,7 +10,7 @@ jobs:
           name: Install Python deps in a venv
           command: |
             ls -a
-            pip echo "scipy" > requirements.txt
+            echo "scipy" > requirements.txt
             ls -a
             pip install -r requirements.txt
       - run:
