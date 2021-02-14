@@ -5,15 +5,15 @@ orbs:
 
 jobs:
   build-and-test:
-    executor: python/default
+    docker:
+      - image: python:3.9.1
     steps:
       - checkout
       - run:
+          name: Download dependencies
           command: |
-            pip install scipy
-      # - python/load-cache
-      # - python/install-deps
-      # - python/save-cache
+            ls -a
+            pip install -r ./requirements.txt
       - run:
           command: python ./test_utils.py test
           name: Test
