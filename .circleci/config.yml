@@ -15,7 +15,7 @@ jobs:
             ls -a
             pip install -r ./requirements.txt
       - run:
-          command: python ./test_utils.py test
+          command: python ./test_utils.py
           name: Test
       - store_test_results:
           path: ./results.xml
